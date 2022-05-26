@@ -1,22 +1,22 @@
-    import java.util.ArrayList;
+import java.util.ArrayList;
 
-    public abstract class ListManager<T> {
+public abstract class ListManager<T> {
 
-        ArrayList<T> list = new ArrayList<T>();
+    ArrayList<T> list = new ArrayList<>();
 
-        public abstract void addElement(T element);
-        public abstract T removeElement(int position);
-        public abstract void showElements();
-        public abstract void showReversedElements();
+    public abstract void addElement(T element);
+    public abstract T removeElement(int position);
+    public abstract void showElements();
+    public abstract void showReversedElements();
 
-        @Override
-        public String toString() {
-            String output = "-> ";
+    @Override
+    public String toString() {
+        String output = "-> ";
 
-            for ( T value: list ) {
-                output += value.toString() + " | ";
+        for ( Object value: list ) {
+            output = output + value.toString() + " | ";
 
-            }
-        return output;
+        }
+    return output;
     }
 }
