@@ -24,9 +24,9 @@ public class SuperList<T> extends ListManager {
 
     @Override
     public void showReversedElements() {
-        Iterator<T> it = list.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next() );
+        for (int i = list.size()-1; i >= 0; i--) {
+            System.out.println(list.get(i));
+
         }
 
     }
